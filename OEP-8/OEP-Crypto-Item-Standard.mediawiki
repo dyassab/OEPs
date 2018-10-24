@@ -8,12 +8,11 @@
 </pre>
 
 ==Abstract==
-The OEP-8 Proposal is a standard interface for Crypto Item, this standard allows you to transfer any amount of tokens for difference Crypto Item from one address to other address.
-It combines the advantage of OEP-4 and OEP-5, it is very convenient to transfer different types of Crypto Item.
+The OEP-8 Proposal is a standard interface for Crypto Item. This standard allows you to transfer any amount of tokens for different Crypto Item from one address to another address.
+It combines the advantages of OEP-4 and OEP-5, it is very convenient to transfer different types of Crypto Item.
 
 ==Motivation==
-With the development of smart contract DApp, the requirement of transferring different amount of different tokens is more and more intense. If you want to transfer difference amount of different tokens from one address to other address or do batch transfer, it is very difficult now.
-The OEP-8 Proposal can perfectly solve this problem. It is easy to do it.
+With the development of smart contract dApps, the requirement of transferring different amounts of different tokens is more and more intense. If you want to transfer different amounts of different tokens from one address to another address or do a batch transfer, it is currently very difficult to do. The OEP-8 Proposal can perfectly solve this problem.
 
 ==Specification==
 ===Method===
@@ -28,7 +27,7 @@ Returns the name of the Crypto Item <code>tokenId</code> - e.g. "My Crypto Item"
 public static string symbol(byte[] tokenId)
 </pre>
 Returns a short string symbol of Crypto Item <code>tokenId</code> - e.g. <code>"MCI"</code>.
-This symbol SHOULD be short (3-8 characters is recommended), with no whitespace characters or new-lines and SHOULD be limited to the uppercase latin alphabet (i.e. the 26 letters used in English).
+This symbol SHOULD be short (3-8 characters is recommended), with no whitespace characters or newlines and SHOULD be limited to the uppercase Latin alphabet (i.e. the 26 letters used in English).
 
 ====totalSupply====
 <pre>
@@ -49,7 +48,7 @@ public static bool transfer(byte[] from, byte[] to, byte[] tokenId, BigInteger v
 </pre>
 Transfers <code>value</code> of Crypto Item <code>tokenId</code> from <code>from</code> account to <code>to</code> account.
 The parameters <code>from</code> and <code>to</code> SHOULD be 20-byte address. If not, this method SHOULD <code>throw</code> an exception.
-<code>tokenId</code> is the id of Crypto Item. <code>value</code> is the amount of Crypto Item.
+<code>tokenId</code> is the ID of Crypto Item. <code>value</code> is the amount of Crypto Item.
 
 ====transferMulti====
 <pre>
@@ -63,8 +62,8 @@ public struct State
 }
 </pre>
 The transferMulti method allows to transfer multiple <code>value</code> of Crypto Item <code>tokenId</code> from <code>from</code> account to <code>to</code> account.
-The parameters <code>from</code> and <code>to</code> SHOULD be 20-byte address. If not, this method SHOULD <code>throw</code> an exception.
-<code>tokenId</code> is the id of Crypto Item. <code>value</code> is the amount of Crypto Item.
+The parameters <code>from</code> and <code>to</code> SHOULD be a 20-byte address. If not, this method SHOULD <code>throw</code> an exception.
+<code>tokenId</code> is the ID of Crypto Item. <code>value</code> is the amount of Crypto Item.
 
 ====approve====
 <pre>
